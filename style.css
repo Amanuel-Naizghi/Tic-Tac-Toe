@@ -1,0 +1,225 @@
+*{
+    margin:0;
+    padding:0;
+}
+@font-face{
+    font-family:myFont;
+    src:url("./fonts/Indie_Flower/IndieFlower-Regular.ttf")
+}
+body{
+    font-family:myFont;
+    font-weight:600;
+    background:#A87676;
+    color:#344955;
+}
+.upper-content{
+    padding:3rem 2rem 1.5em 2rem;
+    display:flex;
+    justify-content:space-between;
+}
+.upper-content>.upper-left p{
+    margin-bottom: 1.5rem;
+    font-size:1.2rem;
+}
+.upper-content+p{
+    font-size:2.5rem;
+    color:#ECB159;
+    text-align:center;
+}
+.upper-content+p+p{
+    font-size:2rem;
+    color:#ECB159;
+    text-align:center;
+}
+.upper-content>.upper-left p:first-child{
+    font-size:2rem;
+}
+.upper-content>.upper-right button{
+    margin-left:1.2rem;
+    padding:0.2rem 0.5rem;
+    border-radius:5px;
+    font-family:myFont;
+    font-weight:600;
+    font-size:1.2rem;
+    background:#ECB159;
+    border:none;
+}
+.upper-content>.upper-right button:hover{
+    background:#E4C59E;
+}
+.main-content{
+    padding:1.3rem 2rem;
+    display:grid;
+    grid-template-columns: 1fr 2fr 1fr;
+    grid-template-rows:1fr;
+    height:100%;
+    gap:0.8rem;
+    position:relative;
+    justify-content: center;
+}
+.main-content>.main-left,.main-content>.main-right{
+    padding-top:2rem;
+    margin-top:20%;
+    justify-self:center;
+}
+.main-content>.main-right p,.main-content>.main-left p{
+    font-size:2.5rem;
+    margin-bottom:2rem;
+}
+.main-content>.main-right p:first-child+p,.main-content>.main-left p:first-child+p{
+    border:2px solid #344955;
+    width:3rem;
+    font-size:2rem;
+    border-radius:50%;
+    text-align:center;
+    color:#ECB159;
+}
+.main-content>.main-right p:first-child+p+p,.main-content>.main-left p:first-child+p+p{
+    font-size:2rem;
+    padding-left:0.7rem;
+}
+.main-content>.main-middle{
+    display:flex;
+    flex-direction:column;
+    align-items:center; 
+}
+.main-content>.main-middle>#winner-report{
+    font-size:1rem;
+    margin:1.2rem 0 1.5rem 0;
+    text-align:center;
+    height:1.2rem;
+}
+.main-content>.main-middle>#game-direction{
+    font-size:1rem;
+    margin-bottom:3rem;
+    height:1.2rem;
+}
+.main-content>.main-middle>.game-board{
+    display:grid;
+    grid-template-columns:repeat(3,1fr);
+    grid-template-rows:repeat(3,1fr);
+    justify-content:center;
+    width:155px;
+    height:155px;
+}
+.main-content>.main-middle>.game-board div{
+    width:50px;
+    height:50px;
+    background:#ECB159;
+    border:2px solid white;
+    font-size:2rem;
+    text-align:center;
+}
+.main-content>.main-middle>dialog{
+    border:none;
+    color:#344955;
+    grid-column-start:2;
+    grid-column-end: 3;
+    justify-self:center;
+    font-size:1.5rem;
+    background:#D7E4C0;
+    border-radius:25px;
+    position:absolute;
+    top:2rem;
+}
+.main-content>.main-middle>dialog>.dialog-content{
+    display:flex;
+    flex-direction:column;
+    padding:1rem;
+}
+
+.main-middle>dialog .dialog-content form{
+    display:flex;
+    flex-direction:column;
+    margin-top:1.5rem;
+}
+.main-middle>dialog .dialog-content form>input{
+    margin:0.8rem 0;
+    border-radius:10px;
+    background:#B3A398;
+    border:none;
+    height:1.7rem;
+}
+.main-middle>dialog .dialog-content form>.player2-container label[name="player-2"]+#computer{
+    border-radius:5px;
+    font-family:myFont;
+    font-size:0.7rem;
+    background:#A67B5B;
+    color:black;
+    border:none;
+    padding:0rem 0.2rem;
+    margin-left:0.3rem;
+}
+.main-middle>dialog .dialog-content form>.player2-container label[name="player-2"]+#computer:hover{
+    background:#E4C59E;
+}
+.main-middle>dialog .dialog-content form>button#submit{
+    align-self:center;
+    padding:0.2rem 0.5rem;
+    border-radius:5px;
+    font-family:myFont;
+    font-weight:600;
+    font-size:1rem;
+    background:#ECB159;
+    border:none;
+}
+.main-middle>dialog .dialog-content form>button#submit:hover{
+    background:#E4C59E;
+}
+@media(max-width:800px){
+    .upper-content{
+        padding:2rem 1rem 1rem 1rem;
+    }
+    .upper-content>.upper-left p{
+        margin-bottom: 1rem;
+        font-size:0.8rem;
+    }
+    .upper-content+p{
+        font-size:1.5rem;
+    }
+    .upper-content+p+p{
+        font-size:1.2rem;
+    }
+    .upper-content>.upper-left p:first-child{
+        font-size:1.8rem;
+    }
+    .upper-content>.upper-right button{
+        margin-left:0.3rem;
+        padding:0.2rem 0.3rem;
+        font-size:0.8rem;
+    }
+    .main-content{
+        padding:5rem 0;
+    }
+    .main-content>.main-middle>#winner-report{
+        font-size:0.6rem;
+        margin-bottom: 0.9rem;
+    }
+    .main-content>.main-middle>#game-direction{
+        font-size:0.6rem;
+        margin-bottom:0.7rem;
+    }
+    .main-content>.main-right p,.main-content>.main-left p{
+        font-size:1.1rem;
+        margin-bottom:1rem;
+    }
+    .main-content>.main-right p:first-child+p,.main-content>.main-left p:first-child+p{
+        border:2px solid #344955;
+        width:2rem;
+        font-size:1.4rem;
+    }
+    .main-content>.main-middle>dialog{
+        font-size:1rem;
+        top:7rem;
+    }
+    .main-middle>dialog .dialog-content form{
+        margin-top:0.5rem;
+    }
+    .main-middle>dialog .dialog-content form>input{
+        margin:0.6rem 0;
+        height:1.2rem;
+    }
+    .main-middle>dialog .dialog-content form>button{
+        font-size:0.8rem;
+    }
+}

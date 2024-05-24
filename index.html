@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="./style.css">
+</head>
+<body>
+   <div class="container">
+        <div class="upper-content">
+            <div class="upper-left">
+                <p>Tic-Tac-Toe</p>
+                <p>Amanuel N.Tesfatsion edition</p>
+            </div>
+            <div class="upper-right">
+                <button id="restart">Restart</button>
+                <button id="reset-game">Play Again</button>
+            </div>
+        </div>
+        <p>Battle until you find out who is the winner!!</p>
+        <p>XOXOXOXOXOXOXOXOXOXO</p>
+        <div class="main-content">
+            <div class="main-left">
+                <p id="player1-name">Player-1</p>
+                <p>X</p>
+                <p id="player1-win"></p>
+            </div>
+            <div class="main-middle">
+                <p id="winner-report"></p>
+                <p id="game-direction"></p>
+                <div class="game-board">
+                    <div class="board-choice" id="i0"></div>
+                    <div class="board-choice" id="i1"></div>
+                    <div class="board-choice" id="i2"></div>
+                    <div class="board-choice" id="i3"></div>
+                    <div class="board-choice" id="i4"></div>
+                    <div class="board-choice" id="i5"></div>
+                    <div class="board-choice" id="i6"></div>
+                    <div class="board-choice" id="i7"></div>
+                    <div class="board-choice" id="i8"></div>
+                </div>
+                <dialog id="myDialog" open>
+                    <div class="dialog-content">
+                        <p>Welcome To Tic-Tac-Toe</p>
+                        <form action="" onsubmit="return false" id="myForm">
+                            <label for="player-1" name="player-1">Player-1</label>
+                            <input type="text" id="player-1" name="player-1" required>
+                            <div class="player2-container">
+                                <label for="player-2" name="player-2">Player-2</label>
+                                <button type="button" id="computer" name="player-2">Play with computer</button>
+                            </div>
+                            <input type="text" id="player-2" name="player-2" required>
+                            <button type="submit" id="submit">Start</button>
+                        </form>
+                    </div>
+                </dialog>
+            </div>
+            <div class="main-right">
+                <p id="player2-name">Player-2</p>
+                <p>O</p>
+                <p id="player2-win"></p>
+            </div>
+        </div>
+   </div>
+    
+    <script src="./script.js"></script>
+</body>
+</html>
