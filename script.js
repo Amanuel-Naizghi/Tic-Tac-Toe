@@ -340,7 +340,7 @@ function assignWinner(playerName){
     let player2WinCount=document.querySelector("#player2-win");
 
     winnerReporter.textContent=`The round winner is ${playerName}`;
-    gameDirection.textContent="Click play again for another round and click reset to start a new game!";
+    gameDirection.textContent="Click play again for another round and click restart to start a new game!";
     player1WinCount.textContent=players.player1Count;
     player2WinCount.textContent=players.player2Count;
 }
